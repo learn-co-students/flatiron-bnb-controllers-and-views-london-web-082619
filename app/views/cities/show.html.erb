@@ -1,0 +1,11 @@
+<h1>Welcome to <%= @city.name %> </h1>
+
+<h2>Browse by Neighborhood</h2>
+<% @city.neighborhoods.each do |neighborhood| %>
+<p><%= link_to neighborhood.name, neighborhood_path(neighborhood) %></p>
+<% end %>
+
+<h2>Browse by Listing</h2>
+<% @city.listings.each do |listing| %>
+<p><%= link_to listing.title, listing_path(listing) %></p>
+<% end %>

@@ -1,0 +1,10 @@
+<h1>More About <%= @neighborhood.name %></h1>
+
+<h3>City</h3>
+<p><%=@neighborhood.city.name%></p>
+
+<h3>More Listings for <%= @neighborhood.name %></h3>
+<% @neighborhood.listings.each do |listing| %>
+<p><%= link_to listing.title, listing_path(listing) %></p>
+<% end %>
+

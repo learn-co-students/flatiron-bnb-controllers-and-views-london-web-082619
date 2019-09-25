@@ -1,0 +1,21 @@
+<h1>Listing for <%= @listing.title %></h1>
+
+<h3>Address</h3>
+<p><%= @listing.address %></p>
+
+<h3>Listing Type</h3>
+<p><%= @listing.listing_type %></p>
+
+<h3>Description</h3>
+<p><%= @listing.description %></p>
+
+<h3>Price</h3>
+<p><%= @listing.price %></p>
+
+<h3>Neighborhood</h3>
+<p><%= link_to @listing.neighborhood.name, neighborhood_path(@listing.neighborhood) %></p>
+
+<h3>Host</h3>
+<p><%= @listing.host.name %></p>
+
+<%= button_to "Make a Booking", new_reservation_path %>

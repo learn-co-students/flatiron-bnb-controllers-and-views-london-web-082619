@@ -1,15 +1,11 @@
-class ListingsController < ApplicationController
-
-    def index
-        @listings = Listing.all
-    end
+class ReservationsController < ApplicationController
 
     def new
-
+        @reservation = Reservation.new
     end
 
     def create
-
+        
     end
 
     def show
